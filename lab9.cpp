@@ -67,7 +67,8 @@ cumulative = 0;
    }
    
    double getGPA(){
-       return cumulative/credits;
+       int truncIt=100*(cumulative/credits);
+       return truncIt/100.0;
    }
    
    string getName(){
