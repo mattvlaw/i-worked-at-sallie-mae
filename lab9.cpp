@@ -7,6 +7,8 @@
 
 using namespace std;
 
+
+//student class
 class StudentTranscript{
 private:
    string name;
