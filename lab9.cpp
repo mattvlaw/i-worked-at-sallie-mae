@@ -1,3 +1,17 @@
+/*
+Names: Kyle Gorinson
+Matt Law
+Shawn Harriott
+
+Lab 9
+Description: This program asks the user for a student name, and then asks for the amount of credits for a class (or several).
+The program then prints out the student's (or students) GPA.
+
+After that, the names and values are assigned to a map. The user has an option to search for a specific
+GPA in a map. The last part is where the GPA's in the map are sorted in chronological order, no matter the
+order they were inputted.
+*/
+
 #include <iostream>
 #include <iomanip>
 #include <string>
