@@ -30,48 +30,50 @@ private:
    double credits;
    double cumulative;
        
-   
+//converts char input to appropriate GPA
    double convertGrade(char g)
 {
-switch(g)
-{
-case 'A':
-case 'a':
-return 4;
-break;
-case  'B':
-case 'b':
-return 3;
-break;
-case 'C':
-case 'c':
-return 2;
-break;
-case 'D':
-case 'd':
-return 1;
-break;
-case 'E':
-case 'e':
-return 0;
-break;
-}
+   switch(g)
+   {
+      case 'A':
+      case 'a':
+            return 4;
+            break;
+      case  'B':
+      case 'b':
+            return 3;
+            break;
+      case 'C':
+      case 'c':
+            return 2;
+            break;
+      case 'D':
+      case 'd':
+            return 1;
+            break;
+      case 'E':
+      case 'e':
+            return 0;
+            break;
+   }
 }
 
 public:
+   //default constructor
    StudentTranscript(){
-name="nemo";
-credits=0;
-cumulative=0;
+      name="none";
+      credits=0;
+      cumulative=0;
        
    }
-   
+   //constructor taking name
    StudentTranscript(string nm){
-       name = nm;
-credits = 0;
-cumulative = 0;
+      name = nm;
+      credits = 0;
+      cumulative = 0;
    }
    
+   //add grades and credits to GPA
    void insert(char grd, int crd){
        credits += crd;
        cumulative += (convertGrade(grd)*crd);
@@ -81,6 +83,7 @@ cumulative = 0;
    }
    
    double getGPA(){
+      //cast to int and back to truncate all decimal values past 2 places
        int truncIt=100*(cumulative/credits);
        return truncIt/100.0;
    }
